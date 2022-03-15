@@ -24,7 +24,7 @@
                     <a href="#Invest">Investigation and Plan</a>
                 </li>
                 <li>
-                    <a href="#">Design</a>
+                    <a href="#Design">Design</a>
                 </li>
                 <li>
                     <a href="#">Implementation and Testing</a>
@@ -59,14 +59,15 @@
         <h2 id="Invest">Investigation and Plan</h2>
         <h2>Brief Breakdown</h2>
         <h3>Decomposition</h3>
-        <p>The first thing that i did once the brief was
-            released was breaking it down using decomposition.
+        <p>The first thing that I did once the brief was
+            released was break it down using decomposition.
             This made approaching each aspect easier and made sure
             that every element of the project would be covered and
-            not forgotten about. This is the begining stage of any
-            design loop - defining the problem. Here is the two parts
+            not forgotten about. This is the beginning stage of any
+            design loop - defining the problem. Here are the two parts
             of the brief:
         </p>
+        <br>
         <h3>Task</h3>
         <p>
             For this project you are required to design and develop:<br>
@@ -75,14 +76,15 @@
             2. An embedded system that could be used as part of a
             home automation system.
         </p>
+        <br>
         <h3>Basic Requirements</h3>
         <p>
             All of these are required to score higher than a H4 (with advanced
             requirements):<br>
             <b>Website:</b><br>
             - Suits fictional smart home company<br>
-            - 4 Pages including home page<br>
-            - User friendly navigation with clean visual design<br>
+            - 4 pages including a home page<br>
+            - User-friendly navigation with clean visual design<br>
             - Use of: Headings, Paragraphs, Lists, Tables, Links, Images, Multimedia<br>
             - Is accessible (Mobile devices etc.)<br>
             <b>Embedded System:</b><br>
@@ -91,8 +93,8 @@
         </p>
         <h3>Advanced Requirements</h3>
         <p>
-            The Main difference here is the inclusion of control
-            or monitering of the embedded system form the website or
+            The main difference here is the inclusion of control
+            or monitoring of the embedded system from the website or
             another networked device. This means that data must go from
             website to system or vice versa.<br>
             Another difference is the inclusion of more data capture within
@@ -103,11 +105,11 @@
         <br>
         <h2>Research</h2>
         <h3>Choosing a Problem</h3>
-        <p>My first task in begining this project was deciding upon the theme
-            and function of my smart home device. For this I made a spider
+        <p>My first task in beginning this project was deciding upon the theme
+            and function of my smart home device. For this, I made a spider
             diagram of my ideas along with friends and family in a variety of
-            different demographics I interviewed on the subject. First finding
-            the common problem in the household and then coming up with computational
+            different demographics I interviewed on the subject.I first found
+            the common problem in the household and then came up with computational
             solutions to the problem.
         </p>
         <img src="/Imgs/spiderDiagram.JPG" style="width: 500px;">
@@ -115,21 +117,21 @@
         <p>
             After researching some common household problems, I then came up with
             three different solutions that would fit the brief.<br>
-            My first was a typical smart home feature which allowed the user to
+            My first was a typical smart home feature that allowed the user to
             control lights from their browser. This solution had advanced options
             such as light timing or control using sensors.<br>
-            My second solution was an automated pet feeder. This could could use a
+            My second solution was an automated pet feeder. This could use a
             servo motor to open and close a valve of pet food. This feeder could be
             automated or manually controlled through a website.<br>
             My third idea was a basic smart home device catered towards elderly people
-            or those distrustful of always listening devices. When started, the system
+            or those distrustful of always-listening devices. When started, the system
             records what the user is saying and then sends that to a webpage allowing
             the user to view their reminders or notes.
         </p>
         <h3>Chosen Solution</h3>
         <p>
-            I evaluated my three solutions and rated them based on: time required, how
-            well they fit the brief, my interest in the subject and difficulty. Through this
+            I evaluated my three solutions and rated them based on: the time required, how
+            well they fit the brief, my interest in the subject and difficulty. Through this,
             I came to the conclusion that I would do my third solution. This is the smart
             reminder device. One of the reasons for this was the challenge of using an AI system
             which I had never done before. I also thought that this was the most practical
@@ -137,7 +139,7 @@
         </p>
         <h3>Decomposition of Solution</h3>
         <p>
-            I break down the project into more managable chunks to make doing the project
+            I break down the project into more manageable chunks to make doing the project
             easier. This also aided in my research. They were:<br>
             - Recording Voice<br>
             - Audio to Text<br>
@@ -212,7 +214,7 @@
         <br>
         <hr>
         <br>
-        <h2>Design</h2>
+        <h2 id="Design">Design</h2>
         <h3>Design Process</h3>
         <p>In this project I used the iterative design process seen in this diagram.
             This process is one that I have focused on throughout this project and
@@ -226,6 +228,91 @@
             project myself.
         </p>
         <h3>Pseudo Code</h3>
+        <p>I used pseudo code when making the Python script for my embedded system.
+            This made the process a lot simpler by using computational thinking to 
+            approach each problem individually. This use of abstraction meant I could
+            focus on the main points for each step of the project<br>
+            My pseudo code went as follows:<br>
+            - Import modules for audio, speach recognition and firebase.<br>
+            - Define all variables for audio.<br>
+            - Loop through recording function.<br>
+            - Save audio as a .wav file.<br>
+            - Use speech recognition to convert .wav file to text file<br>
+            - Send text data to firebase<br>
+        </p>
+        <h3>Audio Development</h3>
+        <p>My first step in setting up the audio on the pi was configuring the microphone
+            so that it was recognised by the system. To do this I needed to use a linux driver
+            called Alsa. Using this driver in the linux terminal, I could view my device number
+            and then set it as the default microphone for the system. I then ran a test recording
+            which was succesful. This was my first time working in the linux terminal and it was
+            a good learning experience for me.<br>
+            With my microphone set up and device number I could begin working with the microphone
+            in python. I used the PyAudio import and using their documentation I specified each
+            variable required to record. These were sample rate, chunks and recording time. I then
+            ran their audio function and looped it for the required time. This code was difficult 
+            but I found lots of good documentation online to help.<br>
+            I then set up my firebase database so that I could save these text files. This came with 
+            problems at first as the raspberry pi did not include the imports that the firebase import
+            required. After a lot of searching I found somebody else with the same problem as me on 
+            Stack Overflow. They had found 5 imports for Python that firebase requires to function.
+            After installing these imports I was able to get firebase to run normally on the system.
+        </p>
+        <h3>Website Development</h3>
+        <p>
+            After I had set up my embedded system, I started to focus on my website. Before making 
+            the web pages and making the site look good, I decided to first get the recieval of data 
+            portion functioning. I knew this would be a challenge as in my previous experience in the 
+            class, this was very difficult. The main reason for this is because Firebase is constantly 
+            updated. This means that a tutorial that was accurate a few months ago might not work now.
+            Even the examples that come from the department no longer work currently!<br>
+            Luckily after a lot of trial and error, I was able to find a tutorial that helped me 
+            to create a javascript porgramme that could recieve the data from the database and display
+            it as a HTML element.<br>
+            Once this was completed I moved onto the rest of the website. I started off with the 
+            scaffoling of the website using HTML. once this was done I formatted the website to make it
+            look good using CSS. I wanted the website to have a distinct topbar and sidebar which is 
+            a common feature in proffesionally used websites. To this I learned about Z-Index and box shadows.<br>
+            I also wanted the website to be dynamic. One of the ways I achieved this was by learning about
+            CSS animations. These animations were implemented in my burger menu at the top left which transforms
+            into an x when clicked, my moving sidebar and the slow display dimming when the sidebar is opened.
+            I think these features make a huge impact on the overall quality of the website.<br>
+            It also featured a lot of Javascript, something I learned a lot about during the project. 
+            I used it to change CSS atributes when the menu button was clicked, for the data recieval 
+            from the database and for my login screen which gets a data capture from the user in the form 
+            of a username and password. The Javascript function confirms if they are correct, alerts the user if so 
+            and changes the displayed web page.<br>
+            User Experience was something I took into consideration while building the site.
+            I used complementary colours using a colour generator to make the website easy on the eyes.
+            I also use legible font which I picked from a recommended sample for web design.
+        </p>
+        <br>
+        <hr>
+        <br>
+        <h2>Implementation and Testing</h2>
+        <h3>Testing</h3>
+        <p>Testing plays a huge role in the development of code and this has become clear to 
+            me during the projects I have done. In each of the parts of the project I was testing 
+            at every step along the way. This can be seen with the audio section where I tested
+            my microphone or with the databases where I set up test databases to verify whether my
+            code would work. The testing on the python programmes and the website are examples of
+            white box testing whereas the testing done on the audio software and the databases are known
+            as black box testing. Both of these were integral in completing this project.
+        </p>
+        <h3>Development</h3>
+        <p>Throughout my development I used Github repositories to store and organize
+            my different programmes. This gave me a speed advantage with my overall development.
+            Working with Gihub is also a important skill which will be helpful for me 
+            in the future.
+        </p>
+        <br>
+        <hr>
+        <br>
+        <h2>Evaluation</h2>
+        <br>
+        <hr>
+        <br>
+        <h2>Word Count</h2>
 </body>
 <script src="main.js"></script>
 

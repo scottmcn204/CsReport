@@ -135,3 +135,13 @@ body {
 .menuBtn.open .burgerMenuBtn::after{
     transform: rotate(-45deg) translate(35px, 35px);
 }
+h2{
+    color: var(--secondary);
+}
+h3{
+    color: var(--primary);
+}
+hr{
+    color: black;
+    border-color: black;
+}
