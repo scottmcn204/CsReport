@@ -1,142 +1,232 @@
 <!DOCTYPE html>
- <html>
-     <head>
-         <title>Report</title>
-     </head>
-     <body>
-         <h1>Computer Science Individual Report</h1>
-         <h2>Bibliography</h2>
-         <ul>
-             <li>Investigation and Plan</li>
-             <dd>Brief Breakdown</dd>
-             <dd>Research</dd>
-             <dd></dd>
-             <li>Design</li>
-             <li>Implementation and Testing</li>
-             <li>Evaluation</li>
-             <li>References</li>
-             <li>Word Count</li>
-         </ul>
-         <br><hr><br>
-         <h2>Investigation and Plan</h2>
-         <h2>Brief Breakdown</h2>
-         <h3>Decomposition</h3>
-         <p>The first thing that i did once the brief was 
-             released was breaking it down using decomposition.
-             This made approaching each aspect easier and made sure 
-             that every element of the project would be covered and
-             not forgotten about. This is the begining stage of any
-             design loop - defining the problem. Here is the two parts
-             of the brief:
-         </p>
-         <h3>Task</h3>
-         <p>
-             For this project you are required to design and develop:<br>
-             1. An interactive website on behalf of a fictional home 
-             automation company.<br>
-             2. An embedded system that could be used as part of a 
-             home automation system.
-         </p>
-         <h3>Basic Requirements</h3>
-         <p>
-             All of these are required to score higher than a H4 (with advanced
-             requirements):<br>
-             <b>Website:</b><br>
-             - Suits fictional smart home company<br>
-             - 4 Pages including home page<br>
-             - User friendly navigation with clean visual design<br>
-             - Use of: Headings, Paragraphs, Lists, Tables, Links, Images, Multimedia<br>
-             - Is accessible (Mobile devices etc.)<br>
-             <b>Embedded System:</b><br>
-             - Standalone Device<br>
-             - Should work with minimal user input
-         </p>
-         <h3>Advanced Requirements</h3>
-         <p>
-             The Main difference here is the inclusion of control
-             or monitering of the embedded system form the website or
-             another networked device. This means that data must go from 
-             website to system or vice versa.<br>
-             Another difference is the inclusion of more data capture within
-             the website (forms, labels, buttons, menus, etc.)<br>
-             As well as these there should be the implementation of a
-             validation system.
-         </p>
-         <br>
-         <h2>Research</h2>
-         <h3>Choosing a Problem</h3>
-         <p>My first task in begining this project was deciding upon the theme
-             and function of my smart home device. For this I made a spider
-             diagram of my ideas along with friends and family in a variety of
-             different demographics I interviewed  on the subject. First finding 
-             the common problem in the household and then coming up with computational 
-             solutions to the problem.
-         </p>
-         <img src="/Imgs/spiderDiagram.JPG" style="width: 500px;">
-         <h3>3 Solutions</h3>
-         <p>
-             After researching some common household problems, I then came up with 
-             three different solutions that would fit the brief.<br> 
-             My first was a typical smart home feature which allowed the user to 
-             control lights from their browser. This solution had advanced options
-             such as light timing or control using sensors.<br>
-             My second solution was an automated pet feeder. This could could use a 
-             servo motor to open and close a valve of pet food. This feeder could be 
-             automated or manually controlled through a website.<br>
-             My third idea was a basic smart home device catered towards elderly people
-             or those distrustful of always listening devices. When started, the system 
-             records what the user is saying and then sends that to a webpage allowing
-             the user to view their reminders or notes. 
-         </p>
-         <h3>Chosen Solution</h3>
-         <p>
-             I evaluated my three solutions and rated them based on: time required, how
-             well they fit the brief, my interest in the subject and difficulty. Through this 
-             I came to the conclusion that I would do my third solution. This is the smart 
-             reminder device. One of the reasons for this was the challenge of using an AI system
-             which I had never done before. I also thought that this was the most practical
-             of the solutions and the most likely to be useful.
-         </p>
-         <h3>Decomposition of Solution</h3>
-         <p>
-             I break down the project into more managable chunks to make doing the project 
-             easier. This also aided in my research. They were:<br>
-             - Recording Voice<br>
-             - Audio to Text<br>
-             - Sending Data to Database<br>
-             - Viewing the Data<br>
-             - Company Website
-         </p>
-         <h3>Pseudocode/Overview</h3>
-         <img src="Imgs/brainstorm.jpg" style="width: 400px;">
-         <h3>Recording Voice</h3>
-         <p>
-             This is the embedded system portion of the project
-             This would be performed locally on the raspberry pi. It will
-             record a snippet of audio and save it to the system so it can then
-             be converted into text format.<br>
-             After researching this topic, I decided to use python along with 
-             a small usb microphone plugged into the raspberry pi.
-         <h3>Audio to Text</h3>
-         <p>
-             This portion of the project uses AI techology to convert a audio 
-             file into text format. Unfortunately I don't have the skills nor time 
-             to create this type of programme so I decided to use an import to help
-             me achieve this. 
-         </p>
-         <h3>Sending Data to Database</h3>
-         <p>
-             This part involves getting the text file recorded and sending it 
-             to some kind of database so that it can be later accesed by the 
-             website.<br>
-             I looked into different databases and different ways in which I could
-             access this database.
-         </p>
-         <h3>Viewing the Data</h3>
-         <p>
-             For the user to be able to view the data I need to have a way in which 
-             I can 
-         </p>
-         <h3>Company Website</h3>
-     </body>
- </html>
+<html>
+
+<head>
+    <title>Report</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset='utf-8' />
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0" />
+</head>
+
+<body>
+    <nav class="topbar">
+        <div class="container">
+            <div class="menuBtn">
+                <div class="burgerMenuBtn"></div>
+            </div>
+            <a href="Index.html" class="logo">Report</a>
+        </div>
+    </nav>
+    <div class='wrapper'>
+        <div class="sidebar">
+            <ul>
+                <li>
+                    <a href="#Invest">Investigation and Plan</a>
+                </li>
+                <li>
+                    <a href="#">Design</a>
+                </li>
+                <li>
+                    <a href="#">Implementation and Testing</a>
+                </li>
+                <li>
+                    <a href="#">Evaluation</a>
+                </li>
+                <li>
+                    <a href="#">References</a>
+                </li>
+                <li>
+                    <a href="#">Word Count</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="dim">
+        <h2>Bibliography</h2>
+        <ul>
+            <li>Investigation and Plan</li>
+            <dd>Brief Breakdown</dd>
+            <dd>Research</dd>
+            <dd></dd>
+            <li>Design</li>
+            <li>Implementation and Testing</li>
+            <li>Evaluation</li>
+            <li>References</li>
+            <li>Word Count</li>
+        </ul>
+        <br>
+        <hr><br>
+        <h2 id="Invest">Investigation and Plan</h2>
+        <h2>Brief Breakdown</h2>
+        <h3>Decomposition</h3>
+        <p>The first thing that i did once the brief was
+            released was breaking it down using decomposition.
+            This made approaching each aspect easier and made sure
+            that every element of the project would be covered and
+            not forgotten about. This is the begining stage of any
+            design loop - defining the problem. Here is the two parts
+            of the brief:
+        </p>
+        <h3>Task</h3>
+        <p>
+            For this project you are required to design and develop:<br>
+            1. An interactive website on behalf of a fictional home
+            automation company.<br>
+            2. An embedded system that could be used as part of a
+            home automation system.
+        </p>
+        <h3>Basic Requirements</h3>
+        <p>
+            All of these are required to score higher than a H4 (with advanced
+            requirements):<br>
+            <b>Website:</b><br>
+            - Suits fictional smart home company<br>
+            - 4 Pages including home page<br>
+            - User friendly navigation with clean visual design<br>
+            - Use of: Headings, Paragraphs, Lists, Tables, Links, Images, Multimedia<br>
+            - Is accessible (Mobile devices etc.)<br>
+            <b>Embedded System:</b><br>
+            - Standalone Device<br>
+            - Should work with minimal user input
+        </p>
+        <h3>Advanced Requirements</h3>
+        <p>
+            The Main difference here is the inclusion of control
+            or monitering of the embedded system form the website or
+            another networked device. This means that data must go from
+            website to system or vice versa.<br>
+            Another difference is the inclusion of more data capture within
+            the website (forms, labels, buttons, menus, etc.)<br>
+            As well as these there should be the implementation of a
+            validation system.
+        </p>
+        <br>
+        <h2>Research</h2>
+        <h3>Choosing a Problem</h3>
+        <p>My first task in begining this project was deciding upon the theme
+            and function of my smart home device. For this I made a spider
+            diagram of my ideas along with friends and family in a variety of
+            different demographics I interviewed on the subject. First finding
+            the common problem in the household and then coming up with computational
+            solutions to the problem.
+        </p>
+        <img src="/Imgs/spiderDiagram.JPG" style="width: 500px;">
+        <h3>3 Solutions</h3>
+        <p>
+            After researching some common household problems, I then came up with
+            three different solutions that would fit the brief.<br>
+            My first was a typical smart home feature which allowed the user to
+            control lights from their browser. This solution had advanced options
+            such as light timing or control using sensors.<br>
+            My second solution was an automated pet feeder. This could could use a
+            servo motor to open and close a valve of pet food. This feeder could be
+            automated or manually controlled through a website.<br>
+            My third idea was a basic smart home device catered towards elderly people
+            or those distrustful of always listening devices. When started, the system
+            records what the user is saying and then sends that to a webpage allowing
+            the user to view their reminders or notes.
+        </p>
+        <h3>Chosen Solution</h3>
+        <p>
+            I evaluated my three solutions and rated them based on: time required, how
+            well they fit the brief, my interest in the subject and difficulty. Through this
+            I came to the conclusion that I would do my third solution. This is the smart
+            reminder device. One of the reasons for this was the challenge of using an AI system
+            which I had never done before. I also thought that this was the most practical
+            of the solutions and the most likely to be useful.
+        </p>
+        <h3>Decomposition of Solution</h3>
+        <p>
+            I break down the project into more managable chunks to make doing the project
+            easier. This also aided in my research. They were:<br>
+            - Recording Voice<br>
+            - Audio to Text<br>
+            - Sending Data to Database<br>
+            - Viewing the Data<br>
+            - Company Website
+        </p>
+        <h3>Overview</h3>
+        <img src="Imgs/brainstorm.jpg" style="width: 400px;">
+        <h3>Recording Voice</h3>
+        <p>
+            This is the embedded system portion of the project
+            This would be performed locally on the raspberry pi. It will
+            record a snippet of audio and save it to the system so it can then
+            be converted into text format.<br>
+            After researching this topic, I decided to use python along with
+            a small usb microphone plugged into the raspberry pi. I considered other
+            single board computers for this project but the raspberry pi seemed the most
+            appropriate and had the most ressources surrounding it online.<br>
+            For the recording process itself I decided I would use a software called
+            Alsa. I chose this because it was built into the Pi's linux os and was
+            highly recommended by others I had found doing similar things online.<br>
+            Too work with this audio in python I chose the python import PyAudio.
+            This was because of it's ease of use and I had found a lot of resources online
+            to help use it.
+
+        <h3>Audio to Text</h3>
+        <p>
+            This portion of the project uses AI techology to convert a audio
+            file into text format. Unfortunately I don't have the skills nor time
+            to create this type of programme so I decided to use an import to help
+            me achieve this.<br>
+            I looked into different methods of achieving this text to speech system. I 
+            needed it to be a quick and reliable process. I learned about a python import 
+            called speech_recognition. This import gave me lots of audio to text AI solutions 
+            to choose from made by companies such as Bing and Google. 
+        </p>
+        <h3>Sending Data to Database</h3>
+        <p>
+            This part involves getting the text file recorded and sending it
+            to some kind of database so that it can be later accesed by the
+            website.<br>
+            I looked into different databases and different ways in which I could
+            access this database. This part of the project brought the most difficulty 
+            as can be seen from the actual design. The databases I looked into were ThinkSpeak,
+            Amazon Web Services and Firebase. Firebase was my original choice and what I eventually came
+            back to. I also looked at other languages to achieve this such as Python and Sql but settled
+            on using Python.
+        </p>
+        <h3>Viewing the Data</h3>
+        <p>
+            For the user to be able to view the data I need to have a way in which
+            I can first get the text data from the database to the website.<br>
+            For this part of the research, I designed my solution along with my solution
+            to sending the data. This was because they were both reliant on each other. 
+            I trialed the same databases as the ones I used to send the data. I decided
+            to use Javascript as the language to recieve the data and display it in a 
+            HTML element.
+        </p>
+        <h3>Company Website</h3>
+        <p>
+            For this section I need to create a website with at least 4 web pages,
+            a data capture feature and to display my data from my database.<br>
+            I had worked with websites before as a part of my ALTs but for this project I 
+            wanted my website to reflect the qualities of proffesional websites used by 
+            tech corperations. I made a list of websites that I thought displayed these 
+            qualities and began learning how I could create the same look myself.<br>
+            I did research focused on the use of Javascript, CSS animations and layering 
+            HTML elements. These parts of the website I think bring it closer to one which
+            is used by smart home companiess.
+        </p>
+        <br>
+        <hr>
+        <br>
+        <h2>Design</h2>
+        <h3>Design Process</h3>
+        <p>In this project I used the iterative design process seen in this diagram.
+            This process is one that I have focused on throughout this project and
+            previous ALTs. I first created a planning document, seen in the previous 
+            section. I also kept a GANTT diagram there to keep me on trackw with the 
+            project deadline. I used pseudo code to help in creating the Pythone code 
+            for the embedded system. Before creating my website, I made wireframe sketches. 
+            This greatly sped up the website development process. When I thought I was 
+            finished with my website I got feedback from classmates and friends to get 
+            an outside perspective. Once I was happy with the feedback, I evaluated the
+            project myself.
+        </p>
+        <h3>Pseudo Code</h3>
+</body>
+<script src="main.js"></script>
+
+</html>
