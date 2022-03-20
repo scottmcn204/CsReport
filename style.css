@@ -194,6 +194,6 @@ ul{
     color: var(--dark);
     font-weight: bold;
 }
-.bubble2 a{
-
+.bubble2 b{
+    color: var(--primary);
 }
