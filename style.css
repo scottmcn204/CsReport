@@ -197,3 +197,12 @@ ul{
 .bubble2 b{
     color: var(--primary);
 }
+p{
+    overflow: hidden;
+    position: relative;
+    align-self: center;
+}
+img
+{
+    padding: 10px;
+}

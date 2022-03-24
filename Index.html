@@ -62,14 +62,18 @@
         <h2>Brief Breakdown</h2>
         <div class="bubble2">
             <h3>Decomposition</h3>
-            <p>The first thing that I did once the brief was
+            <img src="Imgs/designPro.png" style="width:150px; float:right;"><br>
+            <p class="img">
+                The first thing that I did once the brief was
                 released was break it down using <b>decomposition</b>.
                 This made approaching each aspect easier and made sure
                 that every element of the project would be covered and
                 not forgotten about. This is the beginning stage of any
                 <b>design loop</b> - defining the problem. Here are the two parts
-                of the brief:
+                of the brief:<br>
+                
             </p>
+            
             <br>
             <h3>Task</h3>
             <p>
@@ -111,6 +115,7 @@
         <h2>Research</h2>
         <div class="bubble2">
             <h3>Choosing a Problem</h3>
+            <img src="Imgs/spiderDiagram.JPG" style="width: 350px; float: right;">
             <p>My first task in beginning this project was deciding upon the theme
                 and function of my smart home device. For this, I made a <b>spider
                     diagram</b> of my ideas along with friends and family in a variety of
@@ -119,7 +124,7 @@
                     solutions</b> to the problem. I also looked into some existing solutions 
                     to household problems. This was helpful in coming up with my solutions.
             </p>
-            <img src="Imgs/spiderDiagram.JPG" style="width: 500px;">
+            
             <br>
             <br>
             <h3>3 Solutions</h3>
@@ -239,6 +244,8 @@
         <h2 id="Test">Implementation and Testing</h2>
         <div class="bubble2">
             <h3>Design Process</h3>
+            <img src="Imgs/GANTT.jpeg" style="width:400px; float:left;">
+            <img src="Imgs/designPro.png" style="width:200px; float: right;"><br>
             <p>In this project I used the iterative design process seen in this diagram.
                 This process is one that I have focused on throughout this project and
                 previous ALTs. I first created a planning document, seen in the previous 
@@ -251,8 +258,8 @@
                 project myself.
             </p>
             <br>
-            <img src="Imgs/GANTT.jpeg" style="width:400px"><br>
-            <img src="Imgs/designPro.png" style="width:200px">
+            
+            
             <br>
             <br>
             <h3>Pseudo Code</h3>
@@ -270,30 +277,34 @@
             </p>
             <br>
             <h3>Audio Development</h3>
-            <p>My first step in setting up the audio on the pi was configuring the microphone
+            
+            <p>
+                <img src="Imgs/linuxMic.png" style="width:500px;float: left;"><br>
+                My first step in setting up the audio on the pi was configuring the microphone
                 so that it was recognised by the system. To do this I needed to use a linux driver
                 called Alsa. Using this driver in the linux terminal, I could view my device number
                 and then set it as the default microphone for the system. I then ran a test recording
                 which was succesful. This was my first time working in the linux terminal and it was
-                a good learning experience for me.<br>
-                <img src="Imgs/linuxMic.png" style="width:500px">
+                a good learning experience for me.<br><br><br>
+            <img src="Imgs/PyAudio.png" style="width:500px;float:left">
                 With my microphone set up and device number I could begin working with the microphone
                 in python. I used the PyAudio import and using their documentation I specified each
                 variable required to record. These were sample rate, chunks and recording time. I then
                 ran their audio function and looped it for the required time. This code was difficult 
                 but I found lots of good documentation online to help.<br>
-                <img src="Imgs/PyAudio.png" style="width:500px"><br><br>
+                <br><br>
                 I then set up my firebase database so that I could save these text files. This came with 
                 problems at first as the raspberry pi did not include the imports that the firebase import
                 required. After a lot of searching I found somebody else with the same problem as me on 
                 Stack Overflow. They had found 5 imports for Python that firebase requires to function.
                 After installing these imports I was able to get firebase to run normally on the system.<br>
-                <img src="Imgs/FireUp.png"style="width:500px">
+                <img src="Imgs/FireUp.png"style="width:700px">
             </p>
-            
+            <hr>
             <br>
             <h3>Website Development</h3>
             <p>
+                <img src="Imgs/Fetch.png" style="width:500px; float:left"><br><br>
                 After I had set up my embedded system, I started to focus on my website. Before making 
                 the web pages and making the site look good, I decided to first get the recieval of data 
                 portion functioning. I knew this would be a challenge as in my previous experience in the 
@@ -304,20 +315,21 @@
                 to create a javascript porgramme that could recieve the data from the database and display
                 it as a HTML element. This was achieved through shared learning between me and some other 
                 students in my class with the same problem.<br>
-                <img src="Imgs/Fetch.png" style="width:500px"><br><br>
+                <br><br>
                 Once this was completed I moved onto the rest of the website. I started off with the 
                 scaffoling of the website using HTML.<br>
-                <img src="Imgs/webMenu.png" style="width:500px"><br><br>
+                <img src="Imgs/webMenu.png" style="width:400px"><br><br>
+                <img src="Imgs/CssGeneral.png" style="width:300px; float:right"><br><br>
                 Once this was done I formatted the website to make it
                 look good using CSS. I wanted the website to have a distinct topbar and sidebar which is 
-                a common feature in proffesionally used websites. To do this I learned about Z-Index and box shadows.<br>
-                <img src="Imgs/CssGeneral.png" style="width:500px"><br><br>
+                a common feature in proffesionally used websites. To do this I learned about Z-Index and box shadows.<br><br><br>
+                
                 I also wanted the website to be dynamic. One of the ways I achieved this was by learning about
                 CSS animations. These animations were implemented in my burger menu at the top left which transforms
                 into an x when clicked, my moving sidebar and the slow display dimming when the sidebar is opened.
                 I think these features make a huge impact on the overall quality of the website.<br>
-                <img src="Imgs/CssBurger.png" style="width:500px">
-                <img src="Imgs/CssAnimation.png" style="width:500px"><br><br>
+                <img src="Imgs/CssAnimation.png" style="width:500px">
+                <img src="Imgs/CssBurger.png" style="width:200px"><br><br>
                 
                 It also featured a lot of Javascript, something I learned a lot about during the project. 
                 I used it to change CSS attributes when the menu button was clicked, for the data recieval 
@@ -327,7 +339,7 @@
                 from a StackOverflow user.<br>
                 <img src="Imgs/JsLogin.png" style="width:500px">
                 <img src="Imgs/JsMenu.png" style="width:500px">
-                <img src="Imgs/stackQ.png" style="width:500px">
+                <img src="Imgs/stackQ.png" style="width:400px">
                 <img src="Imgs/stackAns.png" style="width:500px"><br><br>
                 User Experience was something I took into consideration while building the site.
                 I used complementary colours using a colour generator to make the website easy on the eyes.
@@ -336,7 +348,8 @@
             </p>
             <br>
             <h3>Testing</h3>
-            <p>Testing plays a huge role in the development of code and this has become clear to 
+            <p><img src="Imgs/agileTesting.jpg" style="width:300px; float:right;"><br><br>
+                Testing plays a huge role in the development of code and this has become clear to 
                 me during the projects I have done. In each of the parts of the project I was testing 
                 at every step along the way. This can be seen with the audio section where I tested
                 my microphone or with the databases where I set up test databases to verify whether my
@@ -345,7 +358,7 @@
                 as black box testing. Both of these were integral in completing this project.<br>
                 I also followed an agile testing methodology which is incremental meaning software was 
                 continuosly tested as I worked.
-                <img src="Imgs/agileTesting.jpg" style="width:500px">
+                
             </p>
             <br>
             <h3>Development</h3>
